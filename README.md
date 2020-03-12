@@ -57,3 +57,30 @@ The data payload example:
 For the 2nd test: you can find the solution inside /Web/reward.php file.
 
 <br>
+
+The **get_reward_level()** function accepts two parameters: User and Recent Transaction.
+
+The User can be fetched from a database then the recent transaction is the user's current money spent. 
+
+Since there is no database for this test, I just created a dummy user with a default of historic transaction of $25.
+
+So, in order for the user to become White Level member, he/she needs at least $50 all in all spent including his/her
+
+historic plus (+) any recent transactions made. To become a Blue Level member he/she needs at least $125.
+
+To become a Silver Lever member he/she needs at least $1000 overall spent. And for the Gold Level, at least $2000.
+
+```php
+// 24 here is the user's recent transaction, equals to $24
+// the default historic transaction is $25
+// so $25 + $24 = $49
+// above code will return a message saying// 
+// "you need to spend some more to become a White Level member"
+get_reward_level($user, 24);
+
+// If the user's recent transaction is $100, the he/she
+// will become a Blue Level member
+get_reward_level($user, 100);
+```
+
+<br>
