@@ -74,12 +74,13 @@ To become a Silver Lever member he/she needs at least $1000 overall spent. And f
 // 24 here is the user's recent transaction, equals to $24
 // the default historic transaction is $25
 // so $25 + $24 = $49
-// above code will return a message saying// 
-// "you need to spend some more to become a White Level member"
+// above code will return a message saying 
+// "Spend more to become a White Level member."
 get_reward_level($user, 24);
 
-// If the user's recent transaction is $100, the he/she
-// will become a Blue Level member
+// If the user's recent transaction is $100, then he/she
+// will become a Blue Level member and this code will
+// return "Blue Level"
 get_reward_level($user, 100);
 ```
 
